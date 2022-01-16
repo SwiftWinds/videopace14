@@ -24,7 +24,7 @@
 
     [self setRate:2];
 
-    NSLOg(@"videopace14 -- AVPlayer init'ed");
+    NSLog(@"videopace14 -- AVPlayer init'ed");
 
     return orig;
 }
