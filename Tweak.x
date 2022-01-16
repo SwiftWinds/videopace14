@@ -14,10 +14,6 @@
 
 %end
 
-@interface AVPlayer : NSObject
--(void)setRate:(float)rate;
-@end
-
 %hook AVPlayer
 - (id)init {
     id orig = %orig;
