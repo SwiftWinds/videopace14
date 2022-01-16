@@ -18,10 +18,21 @@
 - (id)init {
     id orig = %orig;
 
-    [self setRate:2];
+    [self setRate:1];
 
     NSLog(@"videopace14 -- AVPlayer init'ed");
 
     return orig;
+}
+
+- (void)setRate:(float)arg0 {
+	%orig(arg0 * 2);
+    NSLog(@"videopace14 -- setRate() called!");
+}
+
+
+- (float)rate {
+    NSLog(@"videopace14 -- rate() called!");
+    return %orig() * 0.5;
 }
 %end
