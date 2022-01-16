@@ -15,7 +15,7 @@
 
 %end
 
-%hook AVPlayer
+%hook AVPlayerController
 
 - (void)setRate:(CGFloat)arg0 {
     NSLog(@"videopace14 -- setRate() called!");
