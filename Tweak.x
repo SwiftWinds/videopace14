@@ -4,12 +4,13 @@
 
 - (void)setRate:(float)rate
 {
-    NSLog(@"videopace14 -- setRate called!");
+    NSLog(@"videopace14 -- setRate() called!");
 	%orig(rate * 2);
 }
 
 - (float)rate
 {
+    NSLog(@"videopace14 -- rate() called!");
 	return %orig() * 0.5;
 }
 
