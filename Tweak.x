@@ -9,23 +9,20 @@
 
 
 - (void)viewDidLoad {
-
     %orig;
     NSLog(@"videopace14 -- Loaded");
-
 }
+
 %end
 
 %hook AVPlayer
 
-- (void)setRate:(float)rate
-{
+- (void)setRate:(CGFloat)arg0 {
     NSLog(@"videopace14 -- setRate() called!");
-	%orig(rate * 2);
+	%orig(arg0 * 2);
 }
 
-- (float)rate
-{
+- (CGFloat)rate {
     NSLog(@"videopace14 -- rate() called!");
 	return %orig() * 0.5;
 }
