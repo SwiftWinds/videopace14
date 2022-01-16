@@ -3,8 +3,8 @@ INSTALL_TARGET_PROCESSES = SpringBoard
 
 include $(THEOS)/makefiles/common.mk
 
-# export SYSROOT = $(THEOS)/sdks/iPhoneOS14.5.sdk
-# export PREFIX = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/
+export SYSROOT = $(THEOS)/sdks/iPhoneOS14.5.sdk
+export PREFIX = $(THEOS)/toolchain/XcodeDefault.xctoolchain/usr/bin/
 
 TWEAK_NAME = videopace14
 $(TWEAK_NAME)_PRIVATE_FRAMEWORKS = AVFoundation
