@@ -7,7 +7,6 @@
 
 %hook SBHomeScreenViewController
 
-
 - (void)viewDidLoad {
     %orig;
     NSLog(@"videopace14 -- Loaded");
@@ -15,16 +14,16 @@
 
 %end
 
+@interface AVPlayer : NSObject
+-(void)setRate:(float)rate;
+@end
+
 %hook AVPlayer
+- (id)init {
+    id orig = %orig;
 
-- (void)setRate:(float)arg0 {
-	%orig(arg0 * 2);
-    NSLog(@"videopace14 -- setRate() called!");
+    [self setRate:2];
+
+    return orig;
 }
-
-- (float)rate {
-    NSLog(@"videopace14 -- rate() called!");
-    return %orig() * 0.5;
-}
-
 %end
