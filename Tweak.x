@@ -15,16 +15,16 @@
 
 %end
 
-%hook AVPlayerController
+%hook AVPlayer
 
-- (void)setRate:(CGFloat)arg0 {
-    NSLog(@"videopace14 -- setRate() called!");
+- (void)setRate:(float)arg0 {
 	%orig(arg0 * 2);
+    NSLog(@"videopace14 -- setRate() called!");
 }
 
-- (CGFloat)rate {
+- (float)rate {
     NSLog(@"videopace14 -- rate() called!");
-	return %orig() * 0.5;
+    return %orig() * 0.5;
 }
 
 %end
