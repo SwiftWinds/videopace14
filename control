@@ -2,8 +2,8 @@ Package: dev.mateowang.videopace14
 Name: videopace14
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: An awesome Orion tweak!
+Description: An awesome MobileSubstrate tweak!
 Maintainer: Mateo Wang
 Author: Mateo Wang
 Section: Tweaks
-Depends: ${ORION}, firmware (>= 12.2)
+Depends: mobilesubstrate (>= 0.9.5000)

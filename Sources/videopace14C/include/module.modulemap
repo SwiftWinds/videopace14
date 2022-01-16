@@ -1,4 +1,0 @@
-module videopace14C {
-    umbrella "."
-    export *
-}
